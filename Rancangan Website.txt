@@ -6,6 +6,9 @@ Konsep Website :
 - Merupakan website essay yang membahas tentang isu panas,musik,film series, dan sains dan teknologi (Topik bisa bertambah).
 - Setiap artikel bisa memuat video,gambar,teks dan juga audio.
 
+Refrensi  :
+How to layout - https://www.youtube.com/watch?v=3C_22eBWpjg
+
 Fitur-fitur yang diinginkan  :
 1. Comment 
 2. Login ( Kasta dibagi menjadi tiga host, writer , dan reader )
