@@ -29,6 +29,7 @@ Npm yang dipakai :
  - flashcard : untuk memberitahu data yang ditamba dan dikurangi 
  - Express-Layout : Mengolah struktur dari ejs 
  - moongose dengan skema
+ - express validation
 
 Struktur file pada VScode : 
   # butuh - public(file yang bisa diakses untuk ejs seperti html,css,dan js)
@@ -38,8 +39,25 @@ Struktur file pada VScode :
 
 Desain Website : 
  - Desain website haruslah responsif untuk pengguna device manapun, maka digunakan bootstrap agar responsif
- - Navbar, sidebar, dan footer 
- - Untuk awalan, tambahkan tampilan artikel palsu untuk percobaan
+ - Navbar dan footer 
+ - Jangan lupa ditambahkan call to action -> Menyuruh pengunjung untuk login untuk dapat request berita atau essay
+  # Navbar
+    -  Sign up dan login
+    -  Logo
+    -  Essay full
+    -  Music
+    -  Film dan series
+    -  Sains dan teknologi
+    -  Writer
+  # Footer
+     - Berisi email, no wa, github
+     - Report issue
+     - about
+
+ * Untuk awalan, tambahkan tampilan artikel palsu untuk percobaan
+
+Refrensi Desain Website : 
+- https://developer.mozilla.org/en-US/
 
 Hal yang dipertanyakan : 
  - Bagaimana event listener pada project ini akan  diolah? 
