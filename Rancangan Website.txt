@@ -7,8 +7,10 @@ Konsep Website :
 - Setiap artikel bisa memuat video,gambar,teks dan juga audio.
 
 Refrensi  :
-How to layout - https://www.youtube.com/watch?v=3C_22eBWpjg
-
+ # How to layout - https://www.youtube.com/watch?v=3C_22eBWpjg
+   - Prinsip pertama : Setiap rows hanya memiliki satu ide saja dan setiap row memiliki eksperien yang berbeda (Contoh penempatannya).
+                       Separasikan isi konten dari row dengan padding
+   - Prinsip Kedua : Harus ada konten terlebih dahulu baru layoutnya agar tahu posisi seperti apa saja
 Fitur-fitur yang diinginkan  :
 1. Comment 
 2. Login ( Kasta dibagi menjadi tiga host, writer , dan reader )
