@@ -4,6 +4,8 @@
 
 Konsep Website : 
 - Merupakan website essay yang membahas tentang isu panas,musik,film series, dan sains dan teknologi (Topik bisa bertambah).
+- Desain minimalis sesuai fungsinya dan tak terlalu banyak konten di dalamnya
+- Setiap topik memiliki routingnya sendiri dengan menggunakan tamplate yang sama
 - Setiap artikel bisa memuat video,gambar,teks dan juga audio.
 
 Refrensi  :
@@ -11,6 +13,7 @@ Refrensi  :
    - Prinsip pertama : Setiap rows hanya memiliki satu ide saja dan setiap row memiliki eksperien yang berbeda (Contoh penempatannya).
                        Separasikan isi konten dari row dengan padding
    - Prinsip Kedua : Harus ada konten terlebih dahulu baru layoutnya agar tahu posisi seperti apa saja
+
 Fitur-fitur yang diinginkan  :
 1. Comment 
 2. Login ( Kasta dibagi menjadi tiga host, writer , dan reader )
@@ -22,6 +25,11 @@ Fitur-fitur yang diinginkan  :
 5. Host bisa menaikan status reader dan menghapus status writer
 6. Kotak pesan untuk request artikel
 7. Kotak Cari
+8. Pagination pada bagian article
+
+List route : 
+ - Main menu
+ - musik,film series dan saintech , and esai(can be anything more general) 
 
 Tools yang dipakai  :
  - Bootstrap (Mendesain halaman web)
@@ -47,17 +55,48 @@ Desain Website :
  - Navbar dan footer 
  - Jangan lupa ditambahkan call to action -> Menyuruh pengunjung untuk login untuk dapat request berita atau essay
   # Navbar
+    - urutan navbar logo - space - Essai - SainsTech - Film & Series - music - space - Search bar - sign up dan login
     -  Sign up dan login
     -  Logo
-    -  Essay full
+    -  Essay 
     -  Music
     -  Film dan series
     -  Sains dan teknologi
-    -  Writer
+   
+% MAIN MENU
+   # Hero Section 
+     - backround gambar sederhana simple
+     - judul -> quote
+     - Deskripsi
+     - sign up  -> learn the benefit
+
+    # Content 
+       - Latest article
+       ==================
+       - musik,film series,essai , dansaintech
+          bukan berupa gambar
+         ada see more
+       ==================
+       - Join Writer dan request topic
+      ====================
+
   # Footer
      - Berisi email, no wa, github
      - Report issue
      - about
+    % ARTICLE MENU
+      - Judul  (di tengah)
+      - about the topic
+       - element article => gambar , judul , penulis , tanggal , deskripsi , read more -> .
+      - footer
+    % ARTICLE ITSELF
+       - Gambar
+       - Disisi adalah artikel yang lainnya
+       - Judul
+       - penulis dan waktu dari artikel 
+       - komentar 
+       - footer
+
 
  * Untuk awalan, tambahkan tampilan artikel palsu untuk percobaan
 
