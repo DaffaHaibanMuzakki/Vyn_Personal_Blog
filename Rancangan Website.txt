@@ -63,6 +63,9 @@ Desain Website :
     -  Music
     -  Film dan series
     -  Sains dan teknologi
+
+% WARNA WEBSITE
+Midnight blue elegance
    
 % MAIN MENU
    # Hero Section 
