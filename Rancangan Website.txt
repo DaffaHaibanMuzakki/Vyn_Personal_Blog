@@ -7,6 +7,7 @@ Konsep Website :
 - Desain minimalis sesuai fungsinya dan tak terlalu banyak konten di dalamnya
 - Setiap topik memiliki routingnya sendiri dengan menggunakan tamplate yang sama
 - Setiap artikel bisa memuat video,gambar,teks dan juga audio.
+- PENTING UNTUK PIKIRKAN DESAIN PADA HALAMAN MOBILE
 
 Refrensi  :
  # How to layout - https://www.youtube.com/watch?v=3C_22eBWpjg
