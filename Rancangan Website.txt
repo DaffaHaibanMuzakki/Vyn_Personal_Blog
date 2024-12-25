@@ -16,7 +16,7 @@ Refrensi  :
    - Prinsip Kedua : Harus ada konten terlebih dahulu baru layoutnya agar tahu posisi seperti apa saja
 
 Fitur-fitur yang diinginkan  :
-1. Comment 
+1. Comment (Fitur di masa nanti)
 2. Login ( Kasta dibagi menjadi tiga host, writer , dan reader )
    #Autentikasi Pengguna:
     Sistem login dan registrasi
