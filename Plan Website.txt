@@ -1,5 +1,0 @@
-1. Merancang Konsep Desain Website
-2. Membuat Desain Website dengan Figma
-3. Membuat html dan css dari setiap desain figma lalu cek juga di halaman website mobile
-4. Mengolah fungsi-fungsi pada website serta backend nya
-5. Membuat artikel itu sendiri
