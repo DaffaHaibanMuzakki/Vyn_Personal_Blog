@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Navbar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    /* General Reset */
+body, ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #0D0D0D;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #f51b1b00;
+  color: #fff;
+  padding: 20px 30px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: #fff;
+  margin: 3px 0;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+}
+
+.navbar-links a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+.btn {
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+
+.content{
+    display: flex;
+    width: 30rem;
+    background-color: #0057b300;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 30rem;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  } 
+
+ 
+}
+
+.daftar{
+    display: flex;
+}
+</style>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="#" class="navbar-brand">Brand</a>
+      <button class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="navbar-links" id="navbar-links">
+        <div class="content">
+            <li><a href="#">Trends</a></li>
+            <li><a href="#">Science'life</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </div>
+        <div class="daftar">
+            <li><a href="#" class="btn">Login</a></li>
+            <li><a href="#" class="btn btn-primary">Sign Up</a></li>
+
+        </div>
+       
+      </ul>
+    </div>
+  </nav>
+  <script src="script.js"></script>
+</body>
+</html>
