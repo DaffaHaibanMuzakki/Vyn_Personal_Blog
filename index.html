@@ -1,158 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom Navbar</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Navbar Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  </head>
 
-<style>
-    /* General Reset */
-body, ul {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <style>
+    body{
+      background-color: #0D0D0D;
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", serif;
+    }
+    .search{
+      border-radius: 4cm;
+      height: 25px;
+      width: 300px;
+      font-size: 16px;
+      margin-top: 5px;
+      
+      background-color: #0D0D0D;
+      border: white 0.5px solid;
+    }
+    
+    .login{
+      margin-top: 5px;
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      height: 30px;
+      justify-content: center;
+      background-color: #0d0d0d00;
+      border-radius: 4cm;
+      border: #00A8FF 1px solid;
+      color: #00A8FF;
+      font-weight: bold;
+      width: 100px;
+      
+      font-size: 12px;
+    }
+    
+    .custom-link{
+      color: #F5F5F5;
+    }
+    
+    .signup{
+      margin-top: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4cm;
+      width: 100px;
+      font-weight: bold;
+      font-size: 12px;
+      color: #0D0D0D;
+      height: 30px;
+      background-color: #00A8FF;
+    }
 
-body {
-    background-color: #0D0D0D;
-  font-family: Arial, sans-serif;
-}
-
-.navbar {
-  background-color: #f51b1b00;
-  color: #fff;
-  padding: 20px 30px;
-}
-
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar-brand {
-  font-size: 1.5rem;
-  color: #fff;
-  text-decoration: none;
-}
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 0;
-}
-
-.bar {
-  height: 3px;
-  width: 25px;
-  background-color: #fff;
-  margin: 3px 0;
-}
-
-.navbar-links {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
-
-.navbar-links li {
-  list-style: none;
-}
-
-.navbar-links a {
-  color: #fff;
-  text-decoration: none;
-  padding: 5px 10px;
-  transition: background-color 0.3s;
-}
-
-.navbar-links a:hover {
-  background-color: #575757;
-  border-radius: 5px;
-}
-
-.btn {
-  border: 1px solid #fff;
-  border-radius: 5px;
-}
-
-.btn-primary {
-  background-color: #007bff;
-  border: none;
-  color: #fff;
-}
-
-.btn-primary:hover {
-  background-color: #0056b3;
-}
+    
+    
+  </style>
 
 
-.content{
-    display: flex;
-    width: 30rem;
-    background-color: #0057b300;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-right: 30rem;
-}
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
-  .navbar-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 50px;
-    right: 20px;
-    background-color: #333;
-    padding: 15px;
-    border-radius: 5px;
-  }
-
-  .navbar-links.show {
-    display: flex;
-  } 
-
- 
-}
-
-.daftar{
-    display: flex;
-}
-</style>
-
-<body>
-  <nav class="navbar">
-    <div class="navbar-container">
-      <a href="#" class="navbar-brand">Brand</a>
-      <button class="hamburger" id="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-      <ul class="navbar-links" id="navbar-links">
-        <div class="content">
-            <li><a href="#">Trends</a></li>
-            <li><a href="#">Science'life</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+  <body>
+    <nav class="navbar navbar-expand-xl ">
+      <div class="container-fluid navbar-container ps-5 pe-5">
+        <a class="navbar-brand custom-link" style="margin-right: 100px;" href="#" >Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navbar-color" id="navbarNav">
+          <ul class="navbar-nav">
+            
+            <li class="nav-item">
+              <a class="nav-link me-5 custom-link" href="#">Trends</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-5 custom-link" href="#">Science's life</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-5 custom-link" href="#">Film Review</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-auto">
+           
+            <form class="form-inline my-2 my-lg-0 me-4">
+      <input class="form-control mr-sm-2 search" type="search" placeholder="Search" aria-label="Search">
+    </form>
+            <li class="nav-item">
+            <li class="nav-item">
+              <a class="nav-link me-2 login " href="#">Log In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link signup" aria-disabled="true">Sign Up</a>
+            </li>
+          </ul>
         </div>
-        <div class="daftar">
-            <li><a href="#" class="btn">Login</a></li>
-            <li><a href="#" class="btn btn-primary">Sign Up</a></li>
-
-        </div>
-       
-      </ul>
-    </div>
-  </nav>
-  <script src="script.js"></script>
-</body>
+      </div>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
 </html>
