@@ -131,15 +131,15 @@ section {
 
     .article-title {
       text-align: center;
-      margin-bottom: 40px;
-      font-size: 1.8rem;
+      margin-bottom: 20px;
+      font-size: 1rem;
       color: #fff;
     }
 
     .article-card {
-      background-color: #1a1a1a;
+      background-color: #1a1a1a00;
       border: none;
-      border-radius: 10px;
+      
       overflow: hidden;
     }
 
@@ -149,6 +149,7 @@ section {
     }
 
     .article-body {
+     
       padding: 15px;
     }
 
@@ -163,23 +164,261 @@ section {
     }
 
     .article-title-text {
-      font-size: 1.2rem;
+      cursor: pointer;
+      font-size: 1.4rem;
       font-weight: bold;
+      color: #F5F5F5;
       margin-bottom: 10px;
-
+      transition: 0.2s ease;
     }
+    
+    
 
     .main-article{
-      width: 45.3rem;
+      width: 24rem;
       
     }
     .main-article-body{
-     
-      height: 395px;
+      height: 450px;
     }
 
-  
     
+      
+      .media img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin-right: 15px;
+        border-radius: 5px;
+      }
+      .article-title {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0;
+      }
+      .article-date {
+        font-size: 12px;
+        color: gray;
+      }
+      .article-container {
+        
+        padding: 8px 0;
+        border-bottom: 1px solid #007bff;
+      }
+
+
+      .container-custom {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+     
+    }
+
+    .card-custom {
+      position: relative;
+      width: 250px;
+      height: 400px;
+      background-color: black;
+      overflow: hidden;
+      border: none;
+    }
+
+    .card-custom img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.8;
+    }
+
+    .card-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .explore-more {
+      color: #00A8FF;
+      font-size: 2rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+  .title-explore-body{
+    height: 425px;
+  }
+  
+  .text-about-body{
+     height: 425px;
+     flex-grow: 1;
+
+   }
+
+   .text-explore{
+  font-family: "Audiowide", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+}
+
+ .change-order{
+  display: flex;
+  justify-content: center;
+  height: 450px;
+ }
+    
+@media (max-width: 991px){
+  .change-order{
+    order: 1;
+  }
+}
+
+.button-join{
+  width: 100px;
+  background-color: #007bbd;
+}
+
+
+.bg-image-container {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.993), rgba(0, 0, 0, 0)), 
+              url('/Public/backround.png');
+  background-size: 110%; /* Cover the container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repetition */
+  height: 400px; /* Set container height */
+  transition: background-size 0.5s ease, transform 0.5s ease; 
+  cursor: pointer;/* Smooth scaling transition */
+  
+}
+
+.main-article:hover .bg-image-container  {
+  background-size: 120%;/* Scale the container slightly */
+  
+}
+
+.main-article:hover .article-title-text {
+  color: #007bbd;/* Scale the container slightly */
+}
+
+@media (max-width: 767px){
+  .bg-image-container{
+    background-size: 170%;
+  }
+  .main-article:hover .bg-image-container {
+  background-size: 185%;/* Scale the container slightly */
+}
+}
+@media (max-width: 988px){
+  .line{
+    display: none;
+  }
+}
+@media (max-width: 764px){
+  .text-about{
+    
+    border-bottom: #007bbd solid;
+  }
+}
+
+
+.article-side:hover{
+  color: #007bbd;
+  cursor: pointer;
+}
+  
+
+.card-for-you {
+  cursor: pointer;
+}
+
+.card-for-you:hover .img-target {
+  transform: scale(1.1);
+}
+
+.card-for-you:hover .article-title-text{
+  color: #007bbd;
+}
+
+.first-card{
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #F5F5F5;
+  width: 90%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.993), rgba(0, 0, 0, 0)), 
+              url('/Public/science\ and\ technologies\ trends\ 1.png');
+  background-size: 120%;
+  transition: 0.5s ease;
+}
+.second-card{
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  font-weight: bold;
+  font-size: 24px;
+  width: 90%;
+  color: #F5F5F5;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.993), rgba(0, 0, 0, 0)), 
+              url('/Public/science\ everyday.jpeg');
+  background-size: 120%;
+  transition: 0.5s ease;
+}
+.third-card{
+  cursor: pointer;
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #F5F5F5;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.993), rgba(0, 0, 0, 0)), 
+              url('/Public/science\ fiction.jpeg');
+  background-size: 120%;
+  transition:  0.5s ease;
+}
+
+
+
+
+
+
+
+.img-hover-card1:hover .first-card{
+  color: #007bbd;
+  background-size: 130%;
+}
+
+.img-hover-card3:hover .third-card{
+  color: #007bbd;
+  background-size: 130%;
+}
+
+.img-hover-card2:hover .second-card{
+  color: #007bbd;
+  background-size: 130%;
+}
+
+.line {
+  width: 1px; /* Thickness of the line */
+   /* Length of the line */
+  background-color: #007bbd; /* Line color */
+  transform: scaleX(0.1); /* Make it thinner if needed */
+}
     
   </style>
 
@@ -241,7 +480,7 @@ section {
         <div class="row align-items-center">
           <!-- Illustration -->
           <div class="col-lg-6 order-1 order-lg-2 text-center mb-4 mb-lg-0">
-            <img src="/Public/image (3).png" alt="Hero Illustration" class="img-fluid">
+            <img src="/Public/image (3).png" alt="Hero Illustration" class="img-fluid img-main">
           </div>
           <!-- Text Content -->
           <div class="col-lg-6 order-2 order-lg-1 text-center text-lg-start">
@@ -256,37 +495,68 @@ section {
 
     <section id="latest-articles">
       <div class="container container-article">
-        <h2 class="article-title">Latest Article</h2>
+        <h2 class="article-title" style="font-size: 24px; margin-bottom: 30px;">LATEST ARTICLE</h2>
         <div class="row g-4">
           <!-- Article 1 -->
 
-
-          <div class="col-md-9 col-lg-4 main-article">
-            <div class="card article-card main-article-body">
-              <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Article Image">
-              <div class="card-body article-body">
+          
+          <div class="col-md-9 col-lg-4 flex-grow-1 main-article  ">
+            <div class="card article-card main-article-body bg-image-container justify-content-end  " style="color: white;">
+              <div class="mb-5 ms-4" >
                 <span class="tag">Science</span>
-                <p class="article-title-text">WILL ROBOT REPLACE US?</p>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-              </div>
+                <div class="article-title-text">WILL ROBOT REPLACE US? THE ANSWER IS HERE LIKE THEM</div>
+                <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+              </div> 
+              
+             
+              
             </div>
           </div>
           
           <!-- Article 2 -->
-          <div class="col-md-6 col-lg-4 second-article">
-            <div class="card article-card">
-              <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Article Image">
-              <div class="card-body article-body">
-                <span class="tag">Tech</span>
-                <p class="article-title-text">IS THIS DESIGN WILL BE START OVER</p>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-              </div>
+          <div class="col-lg d-flex">
+            <div class="card article-card flex-grow-1">
+              <div class="container text-start">
+                
+                <div class="article-container">
+                  <div class="d-flex media">
+                    <img src="/Public/backround.png" alt="Article Image">
+                    <div>
+                      <p class="article-title text-start article-side">Iri dengan Jakarta, Malam Tahun Baru di Surabaya Tak Bisa Dinikmati karena Tak Ada Kembang Api</p>
+                      <p class="article-date">26 Desember 2024</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="article-container">
+                  <div class="d-flex media">
+                    <img src="/Public/Alan_Watts.png" alt="Article Image">
+                    <div>
+                      <p class="article-title text-start article-side">Jalan Satu Arah Stasiun Lempuyangan Jogja Gagal, Makin Macet dan Terjadi Banyak Pelanggaran</p>
+                      <p class="article-date">26 Desember 2024</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="article-container">
+                  <div class="d-flex media">
+                    <img src="/Public/pancake.jpg" alt="Article Image">
+                    <div>
+                      <p class="article-title text-start article-side">Universitas Negeri Surabaya (Unesa): Kampus Pilihan bagi Mahasiswa yang Tertolak Universitas Airlangga (Unair)</p>
+                      <p class="article-date">27 Desember 2024</p>
+                    </div>
+                  </div>
+                </div>
             </div>
           </div>
+        </div>
+      </div>
+          <div class="container container-article">
+            <h2 class="article-title" style="margin-bottom: 30px; font-size: 24px;margin-top: 64px;">FOR YOU</h2>
+            <div class="row g-4">
+              
           <!-- Article 3 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card article-card">
-              <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Article Image">
+          <div class="col-md-6 col-lg-4 third-article">
+            <div class="card article-card card-for-you">
+              <img src="/Public/frieren.jpg" class="card-img-top img-target" alt="Article Image" style="transition: 0.5s ease;">
               <div class="card-body article-body">
                 <span class="tag">Tech</span>
                 <p class="article-title-text">IS THIS DESIGN WILL BE START OVER</p>
@@ -295,9 +565,9 @@ section {
             </div>
           </div>
           <!-- Article 4 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card article-card">
-              <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Article Image">
+          <div class="col-md-6 col-lg-4 fourth article">
+            <div class="card article-card fourth article card-for-you">
+              <img src="/Public/chinese.jpg" class="card-img-top img-target alt="Article Image" style="transition: 0.5s ease;">
               <div class="card-body article-body">
                 <span class="tag">Tech</span>
                 <p class="article-title-text">IS THIS DESIGN WILL BE START OVER</p>
@@ -306,9 +576,9 @@ section {
             </div>
           </div>
           <!-- Article 5 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card article-card">
-              <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Article Image">
+          <div class="col-md-6 col-lg-4 fifth-article">
+            <div class="card article-card fifth-article card-for-you">
+              <img src="/Public/baterai-limbah-b3_169.png" class="card-img-top img-target" alt="Article Image" style=" transition: 0.5s ease;">
               <div class="card-body article-body">
                 <span class="tag">Tech</span>
                 <p class="article-title-text">IS THIS DESIGN WILL BE START OVER</p>
@@ -319,14 +589,122 @@ section {
         </div>
       </div>
     </section>
+
+
+    
+    <section id="categories" style="background-color: #007bbd;">
+   
+    <div class="container  container-article">
+            
+          <div class="row  d-flex" style="row-gap: 100px; ">
+              
+          <!-- Article 3 -->
+          <div class="col-md-6 col-lg-3 change-order ml-5 img-hover-card1 ">
+            <div class="card article-card first-card" >
+              TRENDS
+            </div>
+          </div>
+          <!-- Article 4 -->
+          <div class="col-md-6 col-lg-3 change-order img-hover-card2  ">
+            <div class="card article-card second-card " >
+              SCIENCE'LIFE
+            </div>
+          </div>
+          <!-- Article 5 -->
+          <div class="col-md-6 col-lg-3 change-order img-hover-card3  ">
+            <div class="card article-card third-card text-center" >
+              SCIENCE FICTION
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3 justify-content-center align-content-center" style=" height: 250px;">
+            <div class="card article-card title-explore-body align-items-center justify-content-center" >
+             <div class="text-center text-explore" >EXPLORE MORE</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="about" class="mt-5 ">
+   
+      <div class="container  container-article">
+              
+            <div class="row g-3" >
+                
+            <!-- Article 3 -->
+          
+            
+            
+            <div class="col-md-6 col-lg-3 " style="align-content: center; ">
+              <div class="card article-card title-explore-body align-items-center justify-content-center " style="height: fit-content;" >
+               <div class="text-center text-explore text-about" style="color: #007bbd;">ABOUT</div>
+              </div>
+            </div>
+
+            <div class="line"></div>
+            
+            <div class="col-md-6 col-lg d-flex">
+              <div class="card article-card text-about-body ps-5 ">
+               <div class="text-explore">EXPLORE MORE</div>
+               <div class="text-paraghraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nunc massa, imperdiet et purus quis, ultrices sollicitudin metus. Suspendisse a lacinia augue. Sed non condimentum mauris, nec pellentesque ex. Donec ac condimentum dui. Nam dapibus auctor varius. Nam volutpat enim sed neque tristique vehicula. Donec accumsan eu libero eu ultricies. Vestibulum pulvinar id lectus eget accumsan. Praesent ac pulvinar mauris. Suspendisse arcu ante, tristique eu efficitur eu, tempus quis nisi. Curabitur eget lectus quam. Suspendisse eleifend aliquet blandit. Proin nec lorem eu nunc dictum tincidunt non vel orci. Vestibulum auctor vulputate auctor. Fusce ac purus sit amet nisi aliquam ultrices id in arcu.</div>
+               <div class="text-paraghraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nunc massa, imperdiet et purus quis, ultrices sollicitudin metus. Suspendisse a lacinia augue. Sed non condimentum mauris, nec pellentesque ex. Donec ac condimentum dui. Nam dapibus auctor varius. Nam volutpat enim sed neque tristique vehicula. Donec accumsan eu libero eu ultricies. Vestibulum pulvinar id lectus eget accumsan. Praesent ac pulvinar mauris. Suspendisse arcu ante, tristique eu efficitur eu, tempus quis nisi. Curabitur eget lectus quam. Suspendisse eleifend aliquet blandit. Proin nec lorem eu nunc dictum tincidunt non vel orci. Vestibulum auctor vulputate auctor. Fusce ac purus sit amet nisi aliquam ultrices id in arcu.</div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+  
+      
+
+        <section class="d-flex vh-100 align-items-center justify-content-center bg-secondary">
+          
+          
+          
+          <div class="container text-center">
+            <h1>Welcome to the Center</h1>
+            <p>This layout is perfectly centered vertically and horizontally.</p>
+            <button class="btn btn-light">Get Started</button>
+          </div>
+        </section>
+
+
+
+        <footer class="bg-dark text-white text-center py-4">
+          <div class="container">
+            <p>&copy; 2024 YourWebsiteName. All Rights Reserved.</p>
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="#" class="text-white text-decoration-none">Privacy Policy</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="text-white text-decoration-none">Terms of Service</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="text-white text-decoration-none">Contact</a>
+              </li>
+            </ul>
+            <div class="mt-3">
+              <a href="#" class="text-white me-3">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="#" class="text-white me-3">
+                <i class="bi bi-twitter"></i>
+              </a>
+              <a href="#" class="text-white">
+                <i class="bi bi-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </footer>
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
   </html>
     
 
 
-    
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
-</html>
+    
