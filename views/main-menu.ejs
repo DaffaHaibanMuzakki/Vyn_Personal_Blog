@@ -92,16 +92,16 @@
 
     .hero {
   background-color: #007bbd00; /* Subtle gradient background */
-  min-height: 100vh; /* Full height */
+  
   display: flex;
   align-items: center;
 }
-.hero h1 {
+
+.hero-title {
   color: #00aeff; /* Bright blue text */
 }
-.hero p {
-  color: #ccc; /* Light gray text */
-}
+/* Light gray text */
+
 .hero .btn-primary {
   background-color: #00aeff;
   border: none;
@@ -119,6 +119,7 @@
 
 .description{
   font-size: 14px;
+  color: #ccc
 }
 
 .action{
@@ -129,12 +130,7 @@ section {
       padding: 60px 0;
     }
 
-    .article-title {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 1rem;
-      color: #fff;
-    }
+    
 
     .article-card {
       background-color: #1a1a1a00;
@@ -154,20 +150,19 @@ section {
     }
 
     .tag {
-      background-color: #007bff;
-      color: #fff;
-      font-size: 0.75rem;
-      padding: 5px 10px;
-      border-radius: 20px;
+      background-color: #007bbd;
+      font-size: 0.65rem;
+      padding: 0.5px 20px;
       margin-bottom: 10px;
+      border-radius: 0px;
       display: inline-block;
     }
 
     .article-title-text {
       cursor: pointer;
-      font-size: 1.4rem;
+      font-size:  106%;
       font-weight: bold;
-      color: #F5F5F5;
+      color: #ccc;
       margin-bottom: 10px;
       transition: 0.2s ease;
     }
@@ -192,16 +187,34 @@ section {
         border-radius: 5px;
       }
       .article-title {
-        font-size: 16px;
+        text-align: center;
+      margin-bottom: 20px;
+      color: #ccc;
+      font-size: small;
+        padding-bottom: 5px;
         font-weight: bold;
         margin: 0;
       }
+      .article-title-main {
+        text-align: center;
+        width: 300px;
+      margin-bottom: 20px;
+      font-size: 1rem;
+      color: #fff;
+        font-size: 16px;
+        border-bottom: 2px solid #007bff ; /* Change thickness & color */
+        padding-bottom: 5px;
+        font-weight: bold;
+        margin: 0;
+      }
+
+
       .article-date {
         font-size: 12px;
         color: gray;
       }
       .article-container {
-        
+        cursor: pointer;
         padding: 8px 0;
         border-bottom: 1px solid #007bff;
       }
@@ -264,6 +277,7 @@ section {
    .text-explore{
   font-family: "Audiowide", serif;
   font-weight: 400;
+  color: #007bbd;
   font-style: normal;
   font-size: 40px;
 }
@@ -287,7 +301,7 @@ section {
 
 
 .bg-image-container {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.993), rgba(255, 42, 42, 0)), 
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.733), rgba(255, 255, 255, 0.103)), 
               url('backround.png');
   background-size: 110%; /* Cover the container */
   background-position: center; /* Center the image */
@@ -315,22 +329,18 @@ section {
   background-size: 185%;/* Scale the container slightly */
 }
 }
-@media (max-width: 988px){
-  .line{
-    display: none;
-  }
-}
+
 @media (max-width: 764px){
   .text-about{
     
-    border-bottom: #007bbd solid;
+    border-bottom: #007bbd solid 1px;
   }
 }
 
 
-.article-side:hover{
+.article-container:hover .article-side{
   color: #007bbd;
-  cursor: pointer;
+  border-radius: 0;
 }
   
 
@@ -418,43 +428,129 @@ section {
    /* Length of the line */
   background-color: #007bbd; /* Line color */
   transform: scaleX(0.1); /* Make it thinner if needed */
+} 
+
+.hero-custom {
+    height: 50px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .element{
+    width: 900px;
+    height: 900px;
+    background-color: #007bbd;
+    left: 0%;
+    transform: rotate(45deg);
+    top: 150%;
+    opacity: 5%;
+    filter: blur(100px);
+    position: absolute;
+  }
+  .element2 {
+    filter: blur(10px);
+    width: 100px;
+    height: 100px;
+    transform: translate(250px,50px);
+    position: absolute;
+    background-color: #007bbd;
+  }
+  .hero-button{
+    background-color: #007bbd;
+  }
+
+  .title-container{
+    background-color: #007bbd;
+  }
+
+  .description-article{
+    color: #ccc;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .line-about{
+    border-right: #007bbd solid 1px;
+    padding-right: 20px; 
+  }
+
+  
+  .image-container{
+    position: relative;
+  }
+  
+  .fit-to-image{
+    position: absolute;
+    left: 8px;
+    top: 85%;
+  }
+  
+  .glow{
+    width: 500px; /* Atur ke ukuran tetap */
+    height: 80px;
+   position: absolute;
+    filter: blur(100px);
+    opacity: 70%;
+    background-color: #007bbd;
+    transform: rotate(-55deg);
+    
+  }
+  
+  @media (max-width: 991px){
+  .line-about{
+    border-right: none;
+  }
 }
+  @media (max-width: 600px){
+  .glow{
+    left: 0%;
+    top: 30%;
+  }
+}
+
+
     
   </style>
 
 
   <body>
-    
-    <section class="hero  py-5 ">
-      <div class="container">
+
+   
+   
+  
+      <div class="container" style="margin-bottom: 100px;">
         <div class="row align-items-center">
           <!-- Illustration -->
           <div class="col-lg-6 order-1 order-lg-2 text-center mb-4 mb-lg-0">
-            <img src="image (3).png" alt="Hero Illustration" class="img-fluid img-main">
+            <img src="/images/Group5(2).png" alt="Hero Illustration" class="img-fluid img-main " >
           </div>
           <!-- Text Content -->
           <div class="col-lg-6 order-2 order-lg-1 text-center text-lg-start">
-            <h1 class="display-4 fw-bold quote">WELCOME TO MY WEBSITE BLOG</h1>
-            <p class="lead description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <a href="#" class="btn btn-primary btn-lg mt-3 action">Sign Up</a>
+            <h1 class="display-4 fw-bold quote hero-title">All The Science and Other Included so join</h1>
+            <p class="lead description hero-paraghraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. e printing and typesetting induste printing and typesetting induste printing and typesetting indust</p>
+            <a href="#" class="btn btn-primary btn-lg mt-3 action hero-button">Sign Up For Free</a>
           </div>
         </div>
       </div>
-    </section>
+    
 
 
-    <section id="latest-articles">
-      <div class="container container-article">
-        <h2 class="article-title" style="font-size: 24px; margin-bottom: 30px;">LATEST ARTICLE</h2>
+    <section id="latest-articles" style="padding: 0;">
+      <div class="container ">
+        <div  style="display:flex ; justify-content: center ; ">
+          <h2 class="article-title-main" style="font-size: 24px; margin-bottom: 30px;">LATEST ARTICLE</h2>
+        </div>
         <div class="row g-4">
           <!-- Article 1 -->
 
           
-          <div class="col-md-9 col-lg-4 flex-grow-1 main-article  ">
-            <div class="card article-card main-article-body bg-image-container justify-content-end  " style="color: white;">
+          <div class="col-md-9 col-lg-4 flex-grow-1 main-article  " >
+            <div class="card article-card main-article-body bg-image-container justify-content-end  " style="border-radius: 0;">
               <div class="mb-5 ms-4" >
                 <span class="tag">Science</span>
-                <div class="article-title-text"><%- latestArticle[0].title %></div>
+                <div class="article-title-text" style="font-size: 1.5rem;"><%- latestArticle[0].title %></div>
                 <div><%- latestArticle[0].description %></div>
               </div> 
               
@@ -467,107 +563,87 @@ section {
           <div class="col-lg d-flex">
             <div class="card article-card flex-grow-1">
               <div class="container text-start">
+                <% let condition = latestArticle.length < 3 ? latestArticle.length: latestArticle.length-1
                 
-                <div class="article-container">
-                  <div class="d-flex media">
-                    <img src="backround.png" alt="Article Image">
-                    <div>
-                      <p class="article-title text-start article-side"><%- latestArticle[1].title %></p>
-                      <p class="article-date"><%- latestArticle[1].time.date + " Desember "%></p>
+                 %>
+                <% for( let index = 1; index < condition; index++ ) { %>
+                  <a href="http://localhost:3000/article/<%-articleLink1[index]%>" style="text-decoration: none;">
+                    <div class="article-container">
+                      <div class="d-flex media mb-2 ">
+                        <img src="<%-latestArticle[index].image.url%>" alt="Article Image">
+                        <div>
+                          <p class="article-title text-start article-side"><%-latestArticle[index].title%></p>
+                          <span class="tag"><%- latestArticle[index].categories  %></span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div class="article-container">
-                  <div class="d-flex media">
-                    <img src="Alan_Watts.png" alt="Article Image">
-                    <div>
-                      <p class="article-title text-start article-side"><%- latestArticle[2].title %></p>
-                      <p class="article-date"><%- latestArticle[2].time.date %></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="article-container">
-                  <div class="d-flex media">
-                    <img src="pancake.jpg" alt="Article Image">
-                    <div>
-                      <p class="article-title text-start article-side"><%- latestArticle[2].title %></p>
-                      <p class="article-date"><%- latestArticle[2].time.date %></p>
-                    </div>
-                    </div>
-                  </div>
+                  </a>
+                  
+                <% } %>
                 </div>
             </div>
           </div>
         </div>
       </div>
           <div class="container container-article">
-            <h2 class="article-title" style="margin-bottom: 30px; font-size: 24px;margin-top: 64px;">FOR YOU</h2>
+             <div  style="display:flex ; justify-content: center ; ">
+          <h2 class="article-title-main" style="font-size: 24px; margin-bottom: 30px; margin-top: 64px;">FOR YOU</h2>
+        </div>
             <div class="row g-4">
               
-          <!-- Article 3 -->
-          <div class="col-md-6 col-lg-4 third-article">
-            <div class="card article-card card-for-you">
-              <img src="<%- generate_article[0].image.url %>" class="card-img-top img-target" alt="Article Image" style="transition: 0.5s ease;">
-                <div class="card-body article-body">
-                  <span class="tag">TESS</span>
-                  <p class="article-title-text"><%- generate_article[0].title %></p>
-                  <p><%- generate_article[0].description %></p>
-                </div>
-            </div>
-          </div>
-          <!-- Article 4 -->
-          <div class="col-md-6 col-lg-4 fourth article">
-            <div class="card article-card fourth article card-for-you">
-              <div class="card article-card card-for-you">
-                <img src="<%- generate_article[1].image.url %>" class="card-img-top img-target" alt="Article Image" style="transition: 0.5s ease;">
-                <div class="card-body article-body">
-                  <span class="tag">TESS</span>
-                  <p class="article-title-text"><%- generate_article[1].title %></p>
-                  <p><%- generate_article[1].description %></p>
-                </div>
-            </div>
-          </div>
-          <!-- Article 5 -->
-        </div>
-        <div class="col-md-6 col-lg-4 fifth-article">
-          <div class="card article-card fifth-article card-for-you">
-            <img src="<%- generate_article[2].image.url %>" class="card-img-top img-target" alt="Article Image" style="transition: 0.5s ease;">
-              <div class="card-body article-body">
-                <span class="tag">TESS</span>
-                <p class="article-title-text"><%- generate_article[2].title %></p>
-                <p><%- generate_article[2].description %></p>
+
+          <% for( let index = 0; index < generate_article.length; index++ ) { %>
+
+            
+              <div class="col-md-6 col-lg-4 pb-5">
+                <a href="http://localhost:3000/article/<%-articleLink2[index]%>" style="text-decoration: none;">
+                  <div class="card article-card card-for-you " style=" border-radius: 0;">
+                    <div class="image-container">
+                      <img src="<%- generate_article[index].image.url %>" class="card-img-top img-target" alt="Article Image" style="transition: 0.5s ease;border-radius: 0;">
+                      <span class="tag fit-to-image"><%- generate_article[index].categories  %></span>
+                    </div>
+                      <div class="card-body article-body">
+                        <p class="article-title-text"><%- generate_article[index].title %></p>
+                        <% let description = generate_article[index].description.length > 88 ? generate_article[index].description.slice(0,88) +"..." : generate_article[index].description  %>
+                        <p class="description-article"><%- description %></p>
+                      </div>
+                  </div>
+                </a>
               </div>
-          </div>
-        </div>
+            
+
+          <% } %>
+        
       </div>
     </section>
 
 
     
-    <section id="categories" style="background-color: #007bbd;">
+    <section id="categories">
    
     <div class="container  container-article">
             
           <div class="row  d-flex" style="row-gap: 100px; ">
               
           <!-- Article 3 -->
-          <div class="col-md-6 col-lg-3 change-order ml-5 img-hover-card1 ">
+           
+          <a class="col-md-6 col-lg-3 change-order ml-5 img-hover-card1 " style="text-decoration: none;" href="http://localhost:3000/categories/trends=1&limit=6">
             <div class="card article-card first-card" >
               TRENDS
             </div>
-          </div>
+          </a>
           <!-- Article 4 -->
-          <div class="col-md-6 col-lg-3 change-order img-hover-card2  ">
+          <a class="col-md-6 col-lg-3 change-order img-hover-card2" style="text-decoration: none;" href="http://localhost:3000/categories/science?page=1&limit=6">
             <div class="card article-card second-card " >
               SCIENCE'LIFE
             </div>
-          </div>
+          </a>
           <!-- Article 5 -->
-          <div class="col-md-6 col-lg-3 change-order img-hover-card3  ">
+          <a class="col-md-6 col-lg-3 change-order img-hover-card3  " style="text-decoration: none;" href="http://localhost:3000/categories/science_fiction?page=1&limit=6">
             <div class="card article-card third-card text-center" >
               SCIENCE FICTION
             </div>
-          </div>
+          </a>
           
           <div class="col-md-6 col-lg-3 justify-content-center align-content-center" style=" height: 250px;">
             <div class="card article-card title-explore-body align-items-center justify-content-center" >
@@ -579,47 +655,38 @@ section {
     </section>
 
 
-    <section id="about" class="mt-5 ">
-   
-      <div class="container  container-article">
-              
-            <div class="row g-3" >
-                
-            <!-- Article 3 -->
-          
-            
-            
-            <div class="col-md-6 col-lg-3 " style="align-content: center; ">
-              <div class="card article-card title-explore-body align-items-center justify-content-center " style="height: fit-content;" >
-               <div class="text-center text-explore text-about" style="color: #007bbd;">ABOUT</div>
-              </div>
-            </div>
+    
+  
 
-            <div class="line"></div>
-            
-            <div class="col-md-6 col-lg d-flex">
-              <div class="card article-card text-about-body ps-5 ">
-               <div class="text-explore">EXPLORE MORE</div>
-               <div class="text-paraghraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nunc massa, imperdiet et purus quis, ultrices sollicitudin metus. Suspendisse a lacinia augue. Sed non condimentum mauris, nec pellentesque ex. Donec ac condimentum dui. Nam dapibus auctor varius. Nam volutpat enim sed neque tristique vehicula. Donec accumsan eu libero eu ultricies. Vestibulum pulvinar id lectus eget accumsan. Praesent ac pulvinar mauris. Suspendisse arcu ante, tristique eu efficitur eu, tempus quis nisi. Curabitur eget lectus quam. Suspendisse eleifend aliquet blandit. Proin nec lorem eu nunc dictum tincidunt non vel orci. Vestibulum auctor vulputate auctor. Fusce ac purus sit amet nisi aliquam ultrices id in arcu.</div>
-               <div class="text-paraghraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nunc massa, imperdiet et purus quis, ultrices sollicitudin metus. Suspendisse a lacinia augue. Sed non condimentum mauris, nec pellentesque ex. Donec ac condimentum dui. Nam dapibus auctor varius. Nam volutpat enim sed neque tristique vehicula. Donec accumsan eu libero eu ultricies. Vestibulum pulvinar id lectus eget accumsan. Praesent ac pulvinar mauris. Suspendisse arcu ante, tristique eu efficitur eu, tempus quis nisi. Curabitur eget lectus quam. Suspendisse eleifend aliquet blandit. Proin nec lorem eu nunc dictum tincidunt non vel orci. Vestibulum auctor vulputate auctor. Fusce ac purus sit amet nisi aliquam ultrices id in arcu.</div>
-              </div>
-            </div>
+      <div class="container" style="margin-top: 150px;position: relative; ">
+
+       
+
+        <div class="row align-items-center" style="position: relative;">
+          <div class="glow"></div>
+          <div class="col-lg-6 order-1 order-lg-1 text-center mb-4 mb-lg-0 pl-5 " >
+            <img src="/images/logo6.png" alt="Hero Illustration" class="img-fluid img-main line-about"  >
             
           </div>
+
+          <div class="col-lg-6 order-2 order-lg-2 text-center text-lg-start">
+            <div class="text-explore" style="color: #ccc;">EXPLORE MORE</div>
+               <div class="text-paraghraph description-article">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nunc massa, imperdiet et purus quis, ultrices sollicitudin metus. Suspendisse a lacinia augue. Sed non condimentum mauris, nec pellentesque ex. Donec ac condimentum dui. Nam dapibus auctor varius. Nam volutpat enim sed neque tristique vehicula. Donec accumsan eu libero eu ultricies. Vestibulum pulvinar id lectus eget accumsan. Praesent ac pulvinar mauris. Suspendisse arcu ante, tristique eu efficitur eu, tempus quis nisi. Curabitur eget lectus quam. Suspendisse eleifend aliquet blandit. Proin nec lorem eu nunc dictum tincidunt non vel orci. Vestibulum auctor vulputate auctor. Fusce ac purus sit amet nisi aliquam ultrices id in arcu.</div>
+          </div>
+          
         </div>
-      </section>
-  
+      </div>
       
 
-        <section class="d-flex vh-100 align-items-center justify-content-center bg-secondary">
+        <section class="d-flex vh-100 align-items-center p-0" >
           
-          
-          
-          <div class="container text-center">
-            <h1>Welcome to the Center</h1>
-            <p>This layout is perfectly centered vertically and horizontally.</p>
-            <button class="btn btn-light">Get Started</button>
+          <div></div>
+
+          <div style="width: fit-content;height: 100vh; display: flex; background-color: #007bbd;" >
+           
           </div>
+          
+         
         </section>
 
 

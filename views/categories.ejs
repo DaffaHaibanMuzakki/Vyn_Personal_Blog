@@ -1,11 +1,561 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Navbar Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  </head>
+
+  <style>
+    body{
+      background-color: #0D0D0D;
+      margin: 0;
+      padding: 0;
+      
+      font-family: "Inter", serif;
+      overflow-x: hidden;
+    }
+    .search{
+      border-radius: 4cm;
+      height: 25px;
+      width: 300px;
+      font-size: 16px;
+      margin-top: 5px;
+      
+      background-color: #0D0D0D;
+      border: white 0.5px solid;
+    }
+    
+    .login{
+      margin-top: 5px;
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      height: 30px;
+      justify-content: center;
+      background-color: #0d0d0d00;
+      border-radius: 4cm;
+      border: #00A8FF 1px solid;
+      color: #00A8FF;
+      font-weight: bold;
+      width: 100px;
+      
+      font-size: 12px;
+    }
+    
+    .custom-link{
+      color: #F5F5F5;
+    }
+    
+    .signup{
+      margin-top: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4cm;
+      width: 100px;
+      font-weight: bold;
+      font-size: 12px;
+      color: #0D0D0D;
+      height: 30px;
+      background-color: #00A8FF;
+    }
+
+    .grid-container {
+      display: none;
+      position: absolute;
+      left: 50%;
+  transform: translate(-50%, -50%);
+      grid-template-columns: repeat(12, 75px);
+      gap: 15px;
+      justify-content: center; /* Centers the grid horizontally */
+      padding: 20px;
+      max-width: calc(12 * 75px + 11 * 15px); /* Adjust max width to fit the grid */
+      margin: 0 auto; /* Centering the grid container */
+    }
+
+    .grid-item {
+      background-color: #575757;
+      height: 1080px; /* Same height as the width */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 10%;
+      text-align: center;
+    }
+
+    .hero {
+  background-color: #007bbd00; /* Subtle gradient background */
+  min-height: 100vh; /* Full height */
+  display: flex;
+  align-items: center;
+}
+.hero h1 {
+  color: #00aeff; /* Bright blue text */
+}
+.hero p {
+  color: #ccc; /* Light gray text */
+}
+.hero .btn-primary {
+  background-color: #00aeff;
+  border: none;
+}
+.hero .btn-primary:hover {
+  background-color: #007bbd;
+}
+
+.quote{
+  font-family: "Audiowide", serif;
+  font-weight: 400;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  font-style: normal;
+  font-size: 150%;
+}
+
+.description{
+  font-size: 14px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.action{
+  font-size: 14px;
+}
+
+section {
+      padding: 60px 0;
+    }
+
+    .article-title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    .article-card {
+      background-color: #1a1a1a00;
+      border: none;
+      
+      overflow: hidden;
+    }
+
+    .article-card img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .article-body {
+     
+      padding: 15px;
+    }
+
+    .tag {
+      background-color: #007bff;
+      color: #fff;
+      font-size: 0.75rem;
+      padding: 5px 10px;
+      border-radius: 0px;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    .article-title-text {
+      cursor: pointer;
+      font-size:  106%;
+      font-weight: bold;
+      color: #ccc;
+      margin-bottom: 10px;
+      transition: 0.2s ease;
+    }
+    
+    
+
+    .main-article{
+      width: 24rem;
+      
+    }
+    .main-article-body{
+      height: 450px;
+    }
+
+    
+      
+      .media img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin-right: 15px;
+        border-radius: 5px;
+      }
+      .article-title {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0;
+      }
+      .article-date {
+        font-size: 12px;
+        color: gray;
+      }
+      .article-container {
+        
+        padding: 8px 0;
+        border-bottom: 1px solid #007bff;
+      }
+
+
+      .container-custom {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+     
+    }
+
+    .card-custom {
+      position: relative;
+      width: 250px;
+      height: 400px;
+      background-color: black;
+      overflow: hidden;
+      border: none;
+    }
+
+    .card-custom img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.8;
+    }
+
+    .card-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .explore-more {
+      color: #00A8FF;
+      font-size: 2rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+  .title-explore-body{
+    height: 425px;
+  }
+  
+  .text-about-body{
+     height: 425px;
+     flex-grow: 1;
+
+   }
+
+   .text-explore{
+  font-family: "Audiowide", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+}
+
+ .change-order{
+  display: flex;
+  justify-content: center;
+  height: 450px;
+ }
+    
+@media (max-width: 991px){
+  .change-order{
+    order: 1;
+  }
+}
+
+.button-join{
+  width: 100px;
+  background-color: #007bbd;
+}
+
+
+.bg-image-container {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.993), rgba(0, 0, 0, 0)), 
+              url('/Public/backround.png');
+  background-size: 110%; /* Cover the container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repetition */
+  height: 400px; /* Set container height */
+  transition: background-size 0.5s ease, transform 0.5s ease; 
+  cursor: pointer;/* Smooth scaling transition */
+  
+}
+
+.main-article:hover .bg-image-container  {
+  background-size: 120%;/* Scale the container slightly */
+  
+}
+
+.main-article:hover .article-title-text {
+  color: #007bbd;/* Scale the container slightly */
+}
+
+@media (max-width: 767px){
+  .bg-image-container{
+    background-size: 170%;
+  }
+  .main-article:hover .bg-image-container {
+  background-size: 185%;/* Scale the container slightly */
+}
+}
+@media (max-width: 988px){
+  .line{
+    display: none;
+  }
+}
+@media (max-width: 764px){
+  .text-about{
+    
+    border-bottom: #007bbd solid;
+  }
+}
+
+
+.article-side:hover{
+  color: #007bbd;
+  cursor: pointer;
+}
+  
+
+.card-for-you {
+  cursor: pointer;
+  height: 100%;
+  background-color: #57575700;
+  
+  padding-bottom: 20px;
+}
+
+.card-for-you:hover .img-target {
+  transform: scale(1.1);
+}
+
+.card-for-you:hover .article-title-text{
+  color: #007bbd;
+}
+
+.first-card{
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #F5F5F5;
+  width: 90%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.993), rgba(0, 0, 0, 0)), 
+              url('/Public/science\ and\ technologies\ trends\ 1.png');
+  background-size: 120%;
+  transition: 0.5s ease;
+}
+.second-card{
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  font-weight: bold;
+  font-size: 24px;
+  width: 90%;
+  color: #F5F5F5;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.993), rgba(0, 0, 0, 0)), 
+              url('/Public/science\ everyday.jpeg');
+  background-size: 120%;
+  transition: 0.5s ease;
+}
+.third-card{
+  cursor: pointer;
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #F5F5F5;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.993), rgba(0, 0, 0, 0)), 
+              url('/Public/science\ fiction.jpeg');
+  background-size: 120%;
+  transition:  0.5s ease;
+}
+
+
+
+
+
+
+
+.img-hover-card1:hover .first-card{
+  color: #007bbd;
+  background-size: 130%;
+}
+
+.img-hover-card3:hover .third-card{
+  color: #007bbd;
+  background-size: 130%;
+}
+
+.img-hover-card2:hover .second-card{
+  color: #007bbd;
+  background-size: 130%;
+}
+
+.line {
+  width: 1px; /* Thickness of the line */
+   /* Length of the line */
+  background-color: #007bbd; /* Line color */
+  transform: scaleX(0.1); /* Make it thinner if needed */
+}
+
+.container-article{
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.page-color{
+  background-color: #007bbd00;
+  border: none;
+  color: #007bbd;
+  margin: 0 10px 5px 0 ;
+  font-size: 18px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.page-color:hover {
+    background-color: #00A8FF;
+    color: white;
+    text-decoration: none;
+  }
+
+  image.container{
+    position: relative;
+  }
+
+  .fit-to-image{
+  position: absolute;
+  left: 8px;
+  top:42%;
+}
+
+
+  
+
+</style>
+
+
 <body>
-    <%- title_categories %>
-</body>
-</html>
+
+  <div class="container-fluid backround-categories p-0" style="background-color: #007bbd; width: 100%;height: 80%;position: absolute; left: 0%;top: 0%; z-index: -1;">
+    <img src=<%-background%> alt="" style="width: 100%;height: 100%;object-fit: cover;filter: brightness(0.5);">
+  </div>
+  
+ 
+  
+  <section style="padding-top: 150px;">
+    <div class="container">
+        <div class="row align-items-center">
+          
+          <!-- Text Content -->
+          <div class="col-lg-6 order-2 order-lg-1 text-center text-lg-start">
+            <h1 class="display-4 fw-bold quote" style="color: #007bbd;"><%-title.toUpperCase()%></h1>
+            <p class="lead description" style="color: #F5F5F5;">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <section id="latest-articles">
+      
+      
+      <!-- Article 2 -->
+      
+      <div class="container container-article">
+        
+       
+            <div class="row g-4" >
+              <% let numberOfArticle = pickNewest.length <=6 ? pickNewest.length : 6%>
+              <% for( let index = 0; index < numberOfArticle; index++ ) { %>
+                <div class="col-md-6 col-lg-4 fourth article"  >
+                  <a href="http://localhost:3000/article/<%-articleLink3[index]%>" style="text-decoration: none;">
+                    <div class="card article-card fourth article card-for-you" style="border-radius: 0%;">
+                      <div class="image-container">
+                        <img src="<%- pickNewest[index].image.url %>" class="card-img-top img-target" alt="Article Image" style="transition: 0.5s ease;border-radius: 0;">
+                        <span class="tag fit-to-image"><%- pickNewest[index].categories  %></span>
+                      </div>
+                      <div class="card article-card card-for-you">
+                        <div class="card-body article-body">
+                          <p class="article-title-text"> <%- pickNewest[index].title %></p>
+                          <p style="color: #ccc;font-size: 14px;"> <%- pickNewest[index].description %></p>
+                        </div>
+                    </div>
+                  </div>
+
+                  </a>
+                <!-- Article 5 -->
+              </div>
+              <% } %>
+      
+    </section>
+
+
+    <nav aria-label="Page navigation example" style="display: flex; justify-content: center ;">
+      <ul class="pagination" style="padding-bottom: 30px;">
+    <% if (currentPage != 1) { %>
+          <li class="page-item">
+            <a class="page-link page-color" href="http://localhost:3000/categories/science?page=<%-currentPage-1%>&limit=6" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only"></span>
+            </a>
+          </li>
+    <% } %>
+
+      <% for( let index = 1; index <= totalPage; index++ ) { %>
+        <li class="page-item" ><a class="page-link page-color" <% if (index == currentPage) { %>
+         style="background-color : #007bbd ; color : white"
+        <% } %> href="http://localhost:3000/categories/<%-title%>?page=<%-index%>&limit=6"><%- index %></a></li>
+        <% if (index > 2) { %>
+          <li class="page-item" ><a class="page-link page-color" href="#">...</a></li>
+          <% break %>
+        <% } %>
+      <% } %>
+      
+      <% if (currentPage != totalPage) { %>
+        <li class="page-item">
+          <a class="page-link page-color" href="http://localhost:3000/categories/science?page=<%-currentPage+1%>&limit=6" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only"></span>
+          </a>
+        </li>
+      <% } %>
+    </ul>
+  </nav>
+  
+        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+  </html>
+    
+
+
+
+    

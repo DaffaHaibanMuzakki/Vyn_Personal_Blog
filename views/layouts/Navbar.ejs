@@ -17,7 +17,6 @@
       background-color: #0D0D0D;
       margin: 0;
       padding: 0;
-      height: 2000px;
       font-family: "Inter", serif;
       overflow-x: hidden;
     }
@@ -45,12 +44,21 @@
       color: #00A8FF;
       font-weight: bold;
       width: 100px;
-      
       font-size: 12px;
+    }
+
+    .login:hover{
+      color: #ccc !important;
+      background-color: #007bbd;
     }
     
     .custom-link{
-      color: #F5F5F5;
+      color: #ccc;
+    }
+    .custom-link:hover{
+      color: #007bbd !important;
+      border-left: #007bbd solid 1px;
+      
     }
     
     .signup{
@@ -64,7 +72,13 @@
       font-size: 12px;
       color: #0D0D0D;
       height: 30px;
+      cursor: pointer;
       background-color: #00A8FF;
+    }
+
+
+    .signup:hover{
+      color: #ccc !important;
     }
 
     .grid-container {
@@ -149,7 +163,6 @@ section {
     }
 
     .article-body {
-     
       padding: 15px;
     }
 
@@ -415,55 +428,43 @@ section {
 
 .line {
   width: 1px; /* Thickness of the line */
-   /* Length of the line */
   background-color: #007bbd; /* Line color */
   transform: scaleX(0.1); /* Make it thinner if needed */
 }
-    
+.nav-item{
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 350;
+  font-style: normal;
+}
   </style>
 
 
   <body>
-    <div class="grid-container">
-      <!-- Repeat grid items -->
-      <div class="grid-item"></div>
-      <div class="grid-item"></div>
-      <div class="grid-item"></div>
-      <div class="grid-item"></div>
-      <div class="grid-item"></div>
-      <div class="grid-item"></div>
-      <div class="grid-item"></div>
-      <div class="grid-item"></div>
-      <div class="grid-item"></div>
-      <div class="grid-item"></div>
-      <div class="grid-item"></div>
-      <div class="grid-item"></div>
-    </div>
-    
-    <nav class="navbar navbar-expand-xl ">
-      <div class="container-fluid navbar-container ps-5 pe-5">
-        <a class="navbar-brand custom-link" style="margin-right: 100px;" href="/" >Navbar</a>
+    <nav class="navbar navbar-expand-lg navbar-custom " >
+      <div class="container-fluid navbar-container pe-5 pt-2" style="padding-left: 100px;">
+        <img src="/images/logo3.png" style="width: 80px;height: 80px;" alt=""> <div style="font-size: 30px;color: #ccc;font-weight: bold;">y</div> <div style="font-size: 30px;color: #007bbd;font-weight: bold;">N</div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse navbar-color" id="navbarNav">
           <ul class="navbar-nav">
             
-            <li class="nav-item">
-              <a class="nav-link me-5 custom-link" href="/categories/trends">Trends</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link me-5 custom-link" href="/categories/science'life">Science's life</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link me-5 custom-link" href="/categories/film">Film Review</a>
-            </li>
+            
           </ul>
           <ul class="navbar-nav ms-auto">
            
             <form class="form-inline my-2 my-lg-0 me-4">
-      <input class="form-control mr-sm-2 search" type="search" placeholder="Search" aria-label="Search">
     </form>
+    <li class="nav-item">
+      <a class="nav-link me-5 custom-link" href="http://localhost:3000/categories/trends?page=1&limit=6">Trends</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link me-5 custom-link" href="http://localhost:3000/categories/science?page=1&limit=6">Science's life</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link me-5 custom-link" href="http://localhost:3000/categories/science_fiction?page=1&limit=6">Science_fiction</a>
+    </li>
             <li class="nav-item">
             <li class="nav-item">
               <a class="nav-link me-2 login " href="#">Log In</a>

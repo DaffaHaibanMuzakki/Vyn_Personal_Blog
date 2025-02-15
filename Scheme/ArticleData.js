@@ -14,7 +14,7 @@ const Article = mongoose.model('Article',{
     } ,
     time :  {
         date : { type : String} ,
-        month : {type: String},
+        month : [String],
         year : {type: String} 
     } , 
      image:  {

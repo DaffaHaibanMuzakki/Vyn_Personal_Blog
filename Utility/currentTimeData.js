@@ -8,7 +8,4 @@ function CurrentTime() {
     }
 }
 
-console.log(CurrentTime());
-
-
-module.exports = CurrentTime();
+module.exports = CurrentTime;

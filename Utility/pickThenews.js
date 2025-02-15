@@ -1,5 +1,5 @@
 
-function pickTheNewest(data) {
+function pickTheNewest(data,limit) {
   return data.sort((a, b) => {
       const { time: { date: date1, month: month1, year: year1 } } = a;
       const { time: { date: date2, month: month2, year: year2 } } = b;
@@ -14,7 +14,7 @@ function pickTheNewest(data) {
       }
 
       return date2 - date1; 
-  }).slice(0,3) ;
+  })
 }
 
 
