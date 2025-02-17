@@ -362,7 +362,6 @@ section {
 
     .content{
       color: #ccc;
-      font-weight: 300;
       font-size: 1.1rem;
       line-height: 1.75;
     }
@@ -372,6 +371,13 @@ section {
       font-weight: 600;
       color: #ccc;
       line-height: 1.4;
+    }
+
+    p {
+      font-weight: 300;
+    }
+    strong {
+      font-weight: bold;
     }
 
     .icon-size{
@@ -429,6 +435,8 @@ section {
 
 
 
+
+
     
   </style>
 
@@ -472,18 +480,10 @@ section {
                   <img src="<%- image %>" style="width: 100%;height: 100%; border-radius: 8px;" >
                 </div>
 
-             
-                <div class="mt-4 content " style="padding-left: 2px;" >Lubang hitam adalah salah satu objek paling misterius di alam semesta. Dengan gravitasi yang sangat kuat, 
-                  tidak ada yang bisa lepas dari cengkeramannya, bahkan cahaya sekalipun. Fenomena ini pertama kali diprediksi oleh 
-                  teori relativitas umum Albert Einstein pada tahun 1915.</div>
-                <div class="mt-4 content " style="padding-left: 2px;" > Ilmuwan telah menemukan banyak lubang hitam di berbagai galaksi, termasuk di pusat galaksi Bima Sakti. 
-                  Salah satu yang paling terkenal adalah Sagitarius A*, yang diyakini memiliki massa jutaan kali lipat dari Matahari.</div>
-                <div class="mt-4 content " style="padding-left: 2px;" >Studi terbaru menunjukkan bahwa lubang hitam memiliki peran penting dalam evolusi galaksi. Mereka dapat 
-                  memengaruhi pembentukan bintang dan distribusi materi di sekitarnya melalui pancaran energi yang sangat besar.</div>
-                <div class="mt-4 content " style="padding-left: 2px;" > Hingga saat ini, banyak pertanyaan masih belum terjawab. Apakah lubang hitam bisa menjadi gerbang ke dimensi lain? 
-                  Bagaimana sebenarnya mekanisme kerja singularitas di dalamnya? Pertanyaan-pertanyaan ini membuat lubang hitam tetap menjadi 
-                  salah satu objek paling menarik dalam dunia astrofisika.</div>
-                  
+                <div class="content mt-5">
+                  <%- content%>
+                </div>
+
 
                   <div>
                     <h2 class="article-title-main" style="font-size: 24px; margin-bottom: 30px; margin-top: 64px; color: #ccc;">See Others</h2>
@@ -504,6 +504,7 @@ section {
                     <% } %>
                   </div>
 
+                 
 
 
     

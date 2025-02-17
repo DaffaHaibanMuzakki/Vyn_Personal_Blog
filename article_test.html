@@ -10,38 +10,12 @@
 
 </head>
 <body>
-  <!-- Toolbar -->
-<div id="toolbar">
-  <button class="ql-bold"></button>
-  <button class="ql-italic"></button>
-  <button class="ql-underline"></button>
-  <button class="ql-strike"></button>
-  <button class="ql-blockquote"></button>
-  <button class="ql-link"></button>
-  <button class="ql-image"></button>
-  <button class="ql-code-block"></button>
-</div>
-
-<!-- Editor -->
-<div id="editor"></div>
-
-<!-- Hidden Input to Store Content -->
-<textarea name="content" id="content" style="display:none;"></textarea>
+ 
 
 
 <script>
   // Initialize Quill
-var quill = new Quill('#editor', {
-  theme: 'snow',
-  modules: {
-    toolbar: '#toolbar'
-  }
-});
 
-// Sync Quill content to hidden textarea before form submit
-document.querySelector("form").onsubmit = function() {
-  document.querySelector("#content").value = quill.root.innerHTML;
-};
 
 </script>
 </body>

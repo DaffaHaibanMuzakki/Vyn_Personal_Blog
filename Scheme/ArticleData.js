@@ -27,7 +27,9 @@ const Article = mongoose.model('Article',{
         type : String
     },
 
-    writer : {type : String}
+    writer : {
+        type : String
+    }
 
 })
 
