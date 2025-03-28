@@ -102,6 +102,18 @@ app.get('/', async function (req, res) {
     console.log(articleLink2);
     res.render('main-menu',{layout:'layouts/Navbar' , latestArticle , generate_article, articleLink1, articleLink2  }) ; 
   }) ; 
+
+app.get('/menu2', async function (req, res) {
+    const latestArticle=  await Article.find().then(e => pickTheNewest(e , 4)) ;
+    const articleLink1 = TitleLink(latestArticle) ;
+    console.log("terbaruu");
+    console.log(latestArticle);
+    const generate_article = await Article.find().then(e => generateArticle(e) ) ;
+    
+    const articleLink2 = TitleLink(generate_article) ; 
+    console.log(articleLink2);
+    res.render('main-menu2',{layout:'layouts/Navbar' , latestArticle , generate_article, articleLink1, articleLink2  }) ; 
+  }) ; 
   
   
 

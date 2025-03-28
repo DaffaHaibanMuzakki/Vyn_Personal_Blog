@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
 
   <style>
@@ -451,11 +452,16 @@ section {
   }
 
   .fit-to-image{
-  position: absolute;
-  left: 8px;
-  top:42%;
-}
+    position: absolute;
+    left: 8px;
+    bottom: 0%;
+  }
 
+  .created_by{
+    font-size: 10px;
+  }
+
+ 
 
   
 
@@ -497,15 +503,20 @@ section {
               <% for( let index = 0; index < numberOfArticle; index++ ) { %>
                 <div class="col-md-6 col-lg-4 fourth article"  >
                   <a href="http://localhost:3000/article/<%-articleLink3[index]%>" style="text-decoration: none;">
-                    <div class="card article-card fourth article card-for-you" style="border-radius: 0%;">
-                      <div class="image-container">
-                        <img src="<%- pickNewest[index].image.url %>" class="card-img-top img-target" alt="Article Image" style="transition: 0.5s ease;border-radius: 0;">
-                        <span class="tag fit-to-image"><%- pickNewest[index].categories  %></span>
+                    <div class="card article-card fourth article card-for-you" style="border-radius: 0px;" >
+                      <div class="image-container" >
+                        <div style="width: auto;height: 200px; background-color: #007bbd; position: relative; overflow: hidden;">
+                          <img src="<%- pickNewest[index].image.url %>" class="card-img-top img-target" alt="Article Image" style="transition: 0.5s ease;border-radius: 0;">
+                        </div>
                       </div>
-                      <div class="card article-card card-for-you">
+                      <div class="card article-card card-for-you" style="border-left: 1px solid #272727; border-right: 1px solid #272727; border-bottom: 1px solid #272727 ; border-radius: 0px;">
                         <div class="card-body article-body">
+                        
+                          <p class="article-title-text" style="color: #a2a6a8;"> Science</p>
                           <p class="article-title-text"> <%- pickNewest[index].title %></p>
-                          <p style="color: #ccc;font-size: 14px;"> <%- pickNewest[index].description %></p>
+                          <% let description = pickNewest[index].description.length > 88 ? pickNewest[index].description.slice(0,88) +"..." : pickNewest[index].description  %>
+                          <p style="color: #ccc;font-size: 14px;"> <%- description %></p>
+                          <div style="font-size: 10px;font-family: 'Inter', serif"><span style="font-weight: 300;">OLEH</span> <span style="color: #007bbd;font-weight: bold;margin-right: 4px;">GUTS BIN SOMAD</span> <i class="bi bi-clock" style="color: #007bbd;"></i> <span>15 Maret 2025</span></div>
                         </div>
                     </div>
                   </div>

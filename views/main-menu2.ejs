@@ -150,7 +150,9 @@ section {
     }
 
     .tag {
-      background-color: #007bbd;
+      background-color: #00000000;
+      border: #007bbd solid 1px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
       font-size: 0.65rem;
       padding: 0.5px 20px;
       margin-bottom: 10px;
@@ -165,10 +167,23 @@ section {
       color: #ccc;
       margin-bottom: 4px;
       transition: 0.2s ease;
+      font-size: 1rem;
+       z-index: 1; 
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     }
     
+    .article-title-text-main {
+      cursor: pointer;
+      font-weight: bold;
+      color: #ccc;
+      margin-bottom: 4px;
+      transition: 0.2s ease;
+      font-size: 1.4rem;
+      
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
     
-
+ 
     .main-article{
       width: 24rem;
       cursor: pointer;
@@ -176,6 +191,8 @@ section {
     .main-article-body{
       height: 450px;
     }
+
+  
 
     
       
@@ -244,6 +261,43 @@ section {
       opacity: 0.8;
     }
 
+    .text {
+            position: absolute;
+            bottom: 80px;
+            left: 10px;
+            color: white;
+            font-size: clamp(14px, 2vw, 32px); /* Responsive text size */
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            padding: 5px 10px;
+            
+            border-radius: 5px;
+        }
+  .text2 {
+            position: absolute;
+            bottom: 60px;
+            left: 10px;
+            color: white;
+            font-size: clamp(8px, 2vw, 16px); /* Responsive text size */
+            font-weight: 300;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            padding: 5px 10px;
+           
+            border-radius: 5px;
+        }
+  .text3{
+            position: absolute;
+            bottom: 130px;
+            left: 20px;
+            color: white;
+            font-size: clamp(6px, 2vw, 12px); /* Responsive text size */
+            font-weight: 300;
+            padding: 1px 14px;
+            background-color: #007bbd;
+           
+        }
+
+       
     .card-text {
       position: absolute;
       top: 50%;
@@ -292,6 +346,19 @@ section {
   .change-order{
     order: 1;
   }
+}
+
+
+
+@media (max-width : 767px) {
+  .article-title-text-main {
+      font-size: 1rem;
+    }
+    .tag {
+      
+      font-size: 0.5rem;
+    
+    }
 }
 
 .button-join{
@@ -503,12 +570,150 @@ section {
     border-right: none;
   }
 }
+
+
+
+
   @media (max-width: 600px){
   .glow{
     left: 0%;
     top: 30%;
   }
 }
+
+.thumbnail{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: relative;
+      aspect-ratio: 16/9;
+      width: 100%;
+      background-color: red;
+    }
+
+.main-article-thumbnail {
+  width: 100%;
+  height: 100%; 
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  transition:  0.5s ease;
+}
+
+.shadow{
+  background: linear-gradient(180deg, #00000004, #000000);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 100%; 
+  height: 100%;
+   position: absolute;
+   cursor: pointer;
+}
+
+.main-article :hover .main-article-thumbnail{
+  transform: scale(1.1);
+  
+}
+
+.main-article :hover .text{
+  color: #007bbd;
+
+}
+
+.main-article-description{
+  color: #ccc;
+    font-size: 0.8rem;
+    font-weight: 300;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 767px){
+  .article-title-text {
+      font-size: 1rem;
+    }
+  .text {
+    bottom: 50px;
+  }
+  .text2 {
+    bottom: 30px;
+  }
+  .text3 {
+    bottom: 120px;
+  }
+}
+@media (max-width: 453px){
+  .article-title-text {
+      font-size: 0.8rem;
+    }
+    .article-title-text-main{
+      font-size: 0.8rem;
+    }
+    
+  }
+  .text-article-container{
+    z-index: 4;
+    padding-top: 200px;
+    width: fit-content;
+    height: fit-content;
+    background-color: #00A8FF;
+  }
+
+  .description_side{
+    color: #ccc;
+    font-weight: 300;
+    font-size: 0.7rem;
+  }
+
+  .description_categories_1 {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    padding-left: 6px;
+    padding-right: 6px; 
+    color: #cccccc00;
+    transition: ease-in 0.5s;
+  }
+
+  .description_categories_2 {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    padding-left: 6px;
+    padding-right: 6px; 
+    color: #cccccc00;
+    transition: ease-in 0.5s;
+  }
+
+  .description_categories_3{
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    padding-left: 6px;
+    padding-right: 6px; 
+    color: #cccccc00;
+    transition: ease-in 0.5s;
+  }
+
+  .img-hover-card1:hover .description_categories_1{
+  color: #ccc;
+  
+}
+  
+  .img-hover-card2:hover .description_categories_2{
+  color: #ccc;
+  
+}
+  
+  .img-hover-card3:hover .description_categories_3{
+  color: #ccc;
+  
+}
+
+.img-hero {
+  width: 45vw;
+}
+  
 
 
     
@@ -524,7 +729,7 @@ section {
         <div class="row align-items-center">
           <!-- Illustration -->
           <div class="col-lg-6 order-1 order-lg-2 text-center mb-4 mb-lg-0">
-            <img src="/images/Group5(2).png" alt="Hero Illustration" class="img-fluid img-main " >
+            <img src="/images/Group5(2).png" alt="Hero Illustration" class="img-fluid img-hero " >
           </div>
           <!-- Text Content -->
           <div class="col-lg-6 order-2 order-lg-1 text-center text-lg-start">
@@ -542,27 +747,26 @@ section {
         <div  style="display:flex ; justify-content: center ; ">
           <h2 class="article-title-main" style="font-size: 24px; margin-bottom: 30px;" >LATEST ARTICLE</h2>
         </div>
-        <div class="row g-4">
-          <!-- Article 1 -->
 
-          
-          <div class="col-md-9 col-lg-4 flex-grow-1 main-article  "  >
+        <div class="row g-4" style="height: fit-content;">
+          <!-- Article 1 -->
+          <div class="flex-grow-1 main-article" >
             
-            <div class="card article-card main-article-body bg-image-container justify-content-end  " style="border-radius: 0; background-image: url('<%- latestArticle[0].image.url %>');z-index: -2; object-fit: cover;">
-            <div style="background: linear-gradient(180deg, #00000000, #000000bd);width: 100%; height: 100%; position: absolute;z-index: -1;cursor: pointer;"></div>
-            <div class="mb-5 ms-4" >
-                <span class="tag">Science</span>
-                <div class="article-title-text" style="font-size: 1.5rem; z-index: 1; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);"><%- latestArticle[0].title %></div>
-                <div style="color: #ccc; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);"><%- latestArticle[0].description %></div>
-              </div> 
-              
-             
+            
+            <div class="thumbnail" style="background-color: #bd7b0000; position: relative;overflow: hidden;">
+              <img class="main-article-thumbnail" src="/images/chinese.jpg" alt="" style="z-index: -2;" >
+              <div class="shadow"></div>
+              <div class="">misal</div>
+              <div class="text"><%- latestArticle[0].title %></div>
+              <div class="text2"><%- latestArticle[0].description %></div>
               
             </div>
+
+              
+             
           </div>
-          
-          <!-- Article 2 -->
-          <div class="col-lg d-flex">
+
+          <div class="col-lg d-flex" >
             <div class="card article-card flex-grow-1">
               <div class="container text-start">
                 <% let condition = latestArticle.length < 3 ? latestArticle.length: 4%>
@@ -570,10 +774,12 @@ section {
                   <a href="http://localhost:3000/article/<%-articleLink1[index]%>" style="text-decoration: none;">
                     <div class="article-container">
                       <div class="d-flex media mb-2 ">
+                        
                         <img src="<%-latestArticle[index].image.url%>" alt="Article Image">
                         <div>
                           <p class="article-title text-start article-side"><%-latestArticle[index].title%></p>
                           <span class="tag"><%- latestArticle[index].categories  %></span>
+                          <div class="description_side"><%- latestArticle[index].description.length > 82 ? latestArticle[index].description.slice(0,80) +"..." : latestArticle[index].description  %> %></div>
                         </div>
                       </div>
                     </div>
@@ -583,37 +789,52 @@ section {
                 </div>
             </div>
           </div>
+            
+          </div>
+          
+          
         </div>
       </div>
-          <div class="container container-article">
-             <div  style="display:flex ; justify-content: center ; ">
-          <h2 class="article-title-main" style="font-size: 24px; margin-bottom: 30px; margin-top: 64px;">FOR YOU</h2>
-        </div>
-            <div class="row g-4">
-              
 
-          <% for( let index = 0; index < generate_article.length; index++ ) { %>
-            
-              <div class="col-md-6 col-lg-4 pb-5">
-                <a href="http://localhost:3000/article/<%-articleLink2[index]%>" style="text-decoration: none;">
-                  <div class="card article-card card-for-you " style=" border-radius: 0;">
-                    <div class="image-container">
+
+       
+
+    </section>
+
+    <section>
+        <div class="container container-article">
+            <div  style="display:flex ; justify-content: center ; ">
+         <h2 class="article-title-main" style="font-size: 24px; margin-bottom: 30px; margin-top: 64px;">FOR YOU</h2>
+       </div>
+           <div class="row g-4">
+             
+
+         <% for( let index = 0; index < generate_article.length; index++ ) { %>
+
+           
+             <div class="col-md-6 col-lg-4 pb-5">
+               <a href="http://localhost:3000/article/<%-articleLink2[index]%>" style="text-decoration: none;">
+                 <div class="card article-card card-for-you " style=" border-radius: 0;">
+                  <div class="image-container" >
+                    <div style="width: auto;height: 200px; background-color: #007bbd; position: relative; overflow: hidden;">
                       <img src="<%- generate_article[index].image.url %>" class="card-img-top img-target" alt="Article Image" style="transition: 0.5s ease;border-radius: 0;">
-                      <span class="tag fit-to-image"><%- generate_article[index].categories  %></span>
                     </div>
-                      <div class="card-body article-body">
-                        <p class="article-title-text"><%- generate_article[index].title %></p>
-                        <% let description = generate_article[index].description.length > 88 ? generate_article[index].description.slice(0,88) +"..." : generate_article[index].description  %>
-                        <p class="description-article"><%- description %></p>
-                      </div>
                   </div>
-                </a>
-              </div>
-            
+                     <div class="card-body article-body">
+                       <p class="article-title-text"><%- generate_article[index].title %></p>
+                       <% let description = generate_article[index].description.length > 88 ? generate_article[index].description.slice(0,88) +"..." : generate_article[index].description  %>
+                       <p class="description-article"><%- description %></p>
+                       <div style="font-size: 10px;font-family: 'Inter', serif"><span style="font-weight: 300;">OLEH</span> <span style="color: #007bbd;font-weight: bold;margin-right: 4px;">GUTS BIN SOMAD</span> <i class="bi bi-clock" style="color: #007bbd;"></i> <span>15 Maret 2025</span></div>
+                     </div>
+                 </div>
+               </a>
+             </div>
+           
 
-          <% } %>
-        
-      </div>
+         <% } %>
+       
+     </div>
+   </div>
     </section>
 
 
@@ -628,19 +849,22 @@ section {
            
           <a class="col-md-6 col-lg-3 change-order ml-5 img-hover-card1 " style="text-decoration: none;" href="http://localhost:3000/categories/trends=1&limit=6">
             <div class="card article-card first-card " style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);" >
-              TRENDS
+              <div>TRENDS</div>
+              <div class="description_categories_1">Misalkan Ini adala deskripsi tentang apa saja lah</div>
             </div>
           </a>
           <!-- Article 4 -->
           <a class="col-md-6 col-lg-3 change-order img-hover-card2" style="text-decoration: none;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);" href="http://localhost:3000/categories/science?page=1&limit=6">
-            <div class="card article-card second-card " >
-              SCIENCE'LIFE
+            <div class="card article-card second-card " style="position: relative;" >
+              <div>SCIENCE'S LIFE</div>
+              <div class="description_categories_2">Misalkan Ini adala deskripsi tentang apa saja lah</div>
             </div>
           </a>
           <!-- Article 5 -->
           <a class="col-md-6 col-lg-3 change-order img-hover-card3  " style="text-decoration: none;" href="http://localhost:3000/categories/science_fiction?page=1&limit=6">
             <div class="card article-card third-card text-center" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);" >
-              SCIENCE FICTION
+              <div> SCIENCE FICTION </div>
+              <div class="description_categories_3">Misalkan Ini adala deskripsi tentang apa saja lah</div>
             </div>
           </a>
           
@@ -661,10 +885,10 @@ section {
 
        
 
-        <div class="row align-items-center" style="position: relative;">
+        <div class="row align-items-center" style="position: relative;margin-bottom: 100px;">
           <div class="glow"></div>
           <div class="col-lg-6 order-1 order-lg-1 text-center mb-4 mb-lg-0 pl-5 " >
-            <img src="/images/logo6.png" alt="Hero Illustration" class="img-fluid img-main line-about"  >
+            <img src="/images/logo6.png" alt="Hero Illustration" class="img-fluid line-about"  >
             
           </div>
 
@@ -677,16 +901,7 @@ section {
       </div>
       
 
-        <section class="d-flex vh-100 align-items-center p-0" >
-          
-          <div></div>
-
-          <div style="width: fit-content;height: 100vh; display: flex; background-color: #007bbd;" >
-           
-          </div>
-          
-         
-        </section>
+   
 
 
 
