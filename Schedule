@@ -6,4 +6,13 @@
 - hire (for later i guess)
 - Making a session (hard)
 - Thumbnail di for you belum dibenarkan
-- Content jadi besar ketika di hp saat disorot
+- categories image loop harus dibenarkan(med)
+
+- Membuat fitur carousel pada halaman utama 
+ 1. Menambah button next dan prev
+ 2. Membuat fitur jsnya pada buttonnya (
+    Jika dipencet maka gambar,judul,serta link itu akan berganti. Data harus menyesuaikan yang ada di data mongo Db. Mungkinkan ambil tiga data dari mongoDB terus tinggal disesuaikan.
+ )
+
+-modif kembali article di blog section
+-  auto slide di halaman utama

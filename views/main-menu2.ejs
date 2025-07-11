@@ -10,6 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
   </head>
 
   <style>
@@ -111,7 +115,7 @@
 }
 
 .quote{
-  font-family: "Audiowide", serif;
+  font-family: "Inter", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 40px;
@@ -162,12 +166,11 @@ section {
 
     .article-title-text {
       cursor: pointer;
-      font-size:  106%;
       font-weight: bold;
       color: #ccc;
       margin-bottom: 4px;
       transition: 0.2s ease;
-      font-size: 1rem;
+      font-size: 1rem !important;
        z-index: 1; 
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     }
@@ -476,17 +479,17 @@ section {
 
 
 .img-hover-card1:hover .first-card{
-  color: #007bbd;
+  color: #015d8f;
   background-size: 130%;
 }
 
 .img-hover-card3:hover .third-card{
-  color: #007bbd;
+  color: #bb0606;
   background-size: 130%;
 }
 
 .img-hover-card2:hover .second-card{
-  color: #007bbd;
+  color: #02790c;
   background-size: 130%;
 }
 
@@ -533,7 +536,7 @@ section {
   }
 
   .description-article{
-    color: #ccc;
+    color: #ccccccb0;
     font-size: 14px;
     font-weight: 300;
   }
@@ -641,6 +644,44 @@ section {
   .text3 {
     bottom: 120px;
   }
+  .img_target_mobile{
+    transform: scale(1.2);
+  }
+
+  .first-card-mobile{
+    background-size: 130%;
+    color: #015d8f;
+  }
+  .second-card-mobile{
+    background-size: 130%;
+    color:  #02790c;
+  }
+  .third-card-mobile{
+    background-size: 130%;
+    color: #bb0606;
+  }
+
+  .description_categories_1_mobile{
+    color: #ccc !important;
+  }
+  .description_categories_2_mobile{
+    color: #ccc !important;
+  }
+  .description_categories_3_mobile{
+    color: #ccc !important;
+  }
+
+  .layout_effect1_mobile{
+    opacity: 1 !important;
+  }
+  .layout_effect2_mobile{
+    opacity: 1 !important;
+  }
+  .layout_effect3_mobile{
+    opacity: 1 !important;
+  }
+
+
 }
 @media (max-width: 453px){
   .article-title-text {
@@ -660,7 +701,7 @@ section {
   }
 
   .description_side{
-    color: #ccc;
+    color: #ccccccd0;
     font-weight: 300;
     font-size: 0.7rem;
   }
@@ -671,7 +712,7 @@ section {
     text-align: center;
     padding-left: 6px;
     padding-right: 6px; 
-    color: #cccccc00;
+    color: #e4151500;
     transition: ease-in 0.5s;
   }
 
@@ -704,6 +745,20 @@ section {
   color: #ccc;
   
 }
+  .img-hover-card2:hover .layout_effect2{
+    opacity: 1 !important;
+  
+}
+  .img-hover-card1:hover .layout_effect1{
+    opacity: 1 !important;
+  
+}
+  .img-hover-card3:hover .layout_effect3{
+    opacity: 1 !important;
+  
+}
+
+
   
   .img-hover-card3:hover .description_categories_3{
   color: #ccc;
@@ -713,7 +768,42 @@ section {
 .img-hero {
   width: 45vw;
 }
-  
+
+
+.circle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #00265c;
+  border-radius: 50%;
+}
+
+.circle_hole {
+  width: 12px;
+  height: 12px;
+  background-color: #00265c00;
+  border: #00265c 1px solid;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.container_circle{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100% ; 
+  height: 50px;
+  background-color: #f5f5f500;
+}
+
+
+
+.arrow:hover{
+ color: #cccccc7e;
+}
 
 
     
@@ -735,7 +825,7 @@ section {
           <div class="col-lg-6 order-2 order-lg-1 text-center text-lg-start">
             <h1 class="display-4 fw-bold quote hero-title">All The Science and Other Included so join</h1>
             <p class="lead description hero-paraghraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. e printing and typesetting induste printing and typesetting induste printing and typesetting indust</p>
-            <a href="#" class="btn btn-primary btn-lg mt-3 action hero-button">Sign Up For Free</a>
+            <a href="#" class="btn btn-primary btn-lg mt-3 action hero-button" onclick="coba()">Sign Up For Free</a>
           </div>
         </div>
       </div>
@@ -751,15 +841,18 @@ section {
         <div class="row g-4" style="height: fit-content;">
           <!-- Article 1 -->
           <div class="flex-grow-1 main-article" >
-            
-            
             <div class="thumbnail" style="background-color: #bd7b0000; position: relative;overflow: hidden;">
               <img class="main-article-thumbnail" src="/images/chinese.jpg" alt="" style="z-index: -2;" >
               <div class="shadow"></div>
-              <div class="">misal</div>
               <div class="text"><%- latestArticle[0].title %></div>
               <div class="text2"><%- latestArticle[0].description %></div>
-              
+              <div class="container_circle">
+                <i class="bi bi-caret-left-fill mx-2 arrow"></i>
+               <div style="width: clamp(8px, 2vw, 12px);aspect-ratio: 1/1;background-color: #007bbd; transform: rotate(45deg); "></div>
+               <div style="width: clamp(8px, 2vw, 12px);aspect-ratio: 1/1;border:solid 1px #007bbd;margin-left: 14px;transform: rotate(45deg);"></div>
+               <div style="width: clamp(8px, 2vw, 12px);aspect-ratio: 1/1;border:solid 1px #007bbd;margin-left: 14px; transform: rotate(45deg);"></div>
+               <i class="bi bi-caret-right-fill mx-2 arrow" onclick="misal()" style="transition: 0.1s linear" ></i>
+              </div>
             </div>
 
               
@@ -774,7 +867,6 @@ section {
                   <a href="http://localhost:3000/article/<%-articleLink1[index]%>" style="text-decoration: none;">
                     <div class="article-container">
                       <div class="d-flex media mb-2 ">
-                        
                         <img src="<%-latestArticle[index].image.url%>" alt="Article Image">
                         <div>
                           <p class="article-title text-start article-side"><%-latestArticle[index].title%></p>
@@ -806,25 +898,24 @@ section {
             <div  style="display:flex ; justify-content: center ; ">
          <h2 class="article-title-main" style="font-size: 24px; margin-bottom: 30px; margin-top: 64px;">FOR YOU</h2>
        </div>
-           <div class="row g-4">
+           <div class="row g-4 mx-1">
              
 
          <% for( let index = 0; index < generate_article.length; index++ ) { %>
-
-           
-             <div class="col-md-6 col-lg-4 pb-5">
+             <div class="col-md-6 col-lg-4 mb-5">
                <a href="http://localhost:3000/article/<%-articleLink2[index]%>" style="text-decoration: none;">
-                 <div class="card article-card card-for-you " style=" border-radius: 0;">
+                 <div class="card article-card card-for-you " style=" border-radius: 0;height: 100%;box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.5) !important;">
                   <div class="image-container" >
-                    <div style="width: auto;height: 200px; background-color: #007bbd; position: relative; overflow: hidden;">
-                      <img src="<%- generate_article[index].image.url %>" class="card-img-top img-target" alt="Article Image" style="transition: 0.5s ease;border-radius: 0;">
+                    <div style="width: auto;height: 200px; background-color: #007bbd00; position: relative; overflow: hidden;">
+                      <img src="<%- generate_article[index].image.url %>" class="card-img-top img-target gambar_percobaan" alt="Article Image" style="transition: 0.5s ease;border-radius: 0;">
                     </div>
                   </div>
                      <div class="card-body article-body">
-                       <p class="article-title-text"><%- generate_article[index].title %></p>
+                       <div class="mb-3" style="font-size: 10px;font-family: 'Inter', serif"><span style="font-weight: 300;">OLEH</span> <span style="color: #007bbd;font-weight: bold;margin-right: 4px;">GUTS BIN SOMAD</span> <i class="bi bi-clock" style="color: #007bbd;"></i> <span>15 Maret 2025</span></div>
+                       <div class="article-title-text mb-2" style="line-height: 1.4;"><%- generate_article[index].title %></div>
                        <% let description = generate_article[index].description.length > 88 ? generate_article[index].description.slice(0,88) +"..." : generate_article[index].description  %>
-                       <p class="description-article"><%- description %></p>
-                       <div style="font-size: 10px;font-family: 'Inter', serif"><span style="font-weight: 300;">OLEH</span> <span style="color: #007bbd;font-weight: bold;margin-right: 4px;">GUTS BIN SOMAD</span> <i class="bi bi-clock" style="color: #007bbd;"></i> <span>15 Maret 2025</span></div>
+                       <p class="description-article mb-4" style="line-height: 1.6;"><%- description %></p>
+                       
                      </div>
                  </div>
                </a>
@@ -848,7 +939,9 @@ section {
           <!-- Article 3 -->
            
           <a class="col-md-6 col-lg-3 change-order ml-5 img-hover-card1 " style="text-decoration: none;" href="http://localhost:3000/categories/trends=1&limit=6">
-            <div class="card article-card first-card " style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);" >
+            <div class="card article-card first-card   " style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);" >
+              <div style="background: linear-gradient(135deg, #ff7f5f00, #0235797e);width: 100%;height: 100%;position: absolute;opacity: 0;transition: 0.5s ease;" class="layout_effect1">
+              </div>
               <div>TRENDS</div>
               <div class="description_categories_1">Misalkan Ini adala deskripsi tentang apa saja lah</div>
             </div>
@@ -856,13 +949,18 @@ section {
           <!-- Article 4 -->
           <a class="col-md-6 col-lg-3 change-order img-hover-card2" style="text-decoration: none;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);" href="http://localhost:3000/categories/science?page=1&limit=6">
             <div class="card article-card second-card " style="position: relative;" >
-              <div>SCIENCE'S LIFE</div>
-              <div class="description_categories_2">Misalkan Ini adala deskripsi tentang apa saja lah</div>
+              <div style="background: linear-gradient(135deg, #ff7f5f00, #2d99027e);width: 100%;height: 100%;position: absolute;opacity: 0;transition: 0.5s ease;" class="layout_effect2">
+
+              </div>
+              <div style="z-index: 2;">SCIENCE'S LIFE</div>
+              <div style="z-index: 2;" class="description_categories_2">Misalkan Ini adala deskripsi tentang apa saja lah</div>
             </div>
           </a>
           <!-- Article 5 -->
           <a class="col-md-6 col-lg-3 change-order img-hover-card3  " style="text-decoration: none;" href="http://localhost:3000/categories/science_fiction?page=1&limit=6">
             <div class="card article-card third-card text-center" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);" >
+              <div style="background: linear-gradient(135deg, #ff7f5f00, #5a05027e);width: 100%;height: 100%;position: absolute;opacity: 0;transition: 0.5s ease;" class="layout_effect3">
+              </div>
               <div> SCIENCE FICTION </div>
               <div class="description_categories_3">Misalkan Ini adala deskripsi tentang apa saja lah</div>
             </div>
@@ -899,14 +997,29 @@ section {
           
         </div>
       </div>
+
+
+      
       
 
    
+      <script>
+        function misal(){
+
+          let judul = document.querySelector(".text") ; 
+          console.log(judul);
+          judul.innerHTML = "Misalkan Berubah"
+          console.log("Tes ini ada");
+        }
 
 
 
-       
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+      </script>
+      <script src="/js/scroll_hover.js"></script>
+    
   </body>
   </html>
     

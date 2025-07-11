@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      height: 500vh; /* Buat halaman panjang agar bisa discroll */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f0f0f0; /* Warna latar belakang */
+    }
+
+    .container {
+      width: 300px;
+      overflow: hidden;
+      margin: 100vh 0; /* Jarak antar gambar */
+      background: white; /* Supaya terlihat jelas */
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .container img {
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    /* Efek membesar */
+    .container.visible img {
+      transform: scale(1.5);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container"><img src="https://via.placeholder.com/300" alt="Gambar 1"></div>
+  <div class="container"><img src="https://via.placeholder.com/300" alt="Gambar 2"></div>
+  <div class="container"><img src="https://via.placeholder.com/300" alt="Gambar 3"></div>
+  <div class="container"><img src="https://via.placeholder.com/300" alt="Gambar 4"></div>
+
+  <script>
+    const containers = document.querySelectorAll('.container');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0.5 });
+
+    containers.forEach(container => observer.observe(container));
+  </script>
+
+</body>
+</html>

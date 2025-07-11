@@ -437,42 +437,75 @@ section {
   font-weight: 350;
   font-style: normal;
 }
+
+.nav-color{
+  background-color: #1C1C1C;border-bottom: #007bbd solid 2px;
+}
+
+
+.scroll-down-nav{
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  background-color: #141414;
+}
+
+.navbar {
+  transition: all 0.5s !important;
+}
+
+.nav-link:hover {
+  border-left: #007bbd solid 1px !important;
+}
+
   </style>
 
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-custom " >
-      <div class="container-fluid navbar-container pe-5 pt-2" style="padding-left: 100px;">
-        <img src="/images/logo3.png" style="width: 80px;height: 80px;" alt=""> <div style="font-size: 30px;color: #ccc;font-weight: bold;">y</div> <div style="font-size: 30px;color: #007bbd;font-weight: bold;">N</div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  
+<nav class="navbar navbar-dark  fixed-top d-lg-none navbar_mobile" >
+  <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
           <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse navbar-color" id="navbarNav">
-          <ul class="navbar-nav">
-            
-            
-          </ul>
-    <ul class="navbar-nav ms-auto">
-    <li class="nav-item">
-      <a class="nav-link me-5 custom-link" href="http://localhost:3000/categories/trends?page=1&limit=6">Trends</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link me-5 custom-link" href="http://localhost:3000/categories/science?page=1&limit=6">Science's life</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link me-5 custom-link" href="http://localhost:3000/categories/science_fiction?page=1&limit=6">Science_fiction</a>
-    </li>
-    <li class="nav-item">
-    <li class="nav-item">
-              <a class="nav-link me-2 login " href="#">Log In</a>
-    </li>
-      <li class="nav-item">
-              <a class="nav-link signup" aria-disabled="true">Sign Up</a>
-      </li>
+      </button>
+      <a class="navbar-brand ms-3" href="#">Logo</a>
+  </div>
+</nav>
+
+
+<div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="sidebarMenu">
+  <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Menu</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+      <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li>
       </ul>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-expand-lg fixed-top d-none d-lg-block navbar_dekstop " >
+  <div class="container-fluid">
+      <div class="navbar-brand" href="#" >
+        <div class="mx-4" style="border: #007bbd 2px solid; border-radius: 50%;height: 50px;display: flex; justify-content: center;">
+          <img src="/images/logo6.png" alt="">
         </div>
+        
       </div>
-    </nav>
+      <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-item me-5"><a class="nav-link nav-link" href="#" style="color: #ccc; font-weight: 200; transition: color 0.3s ease;border-left: #007bbd00 solid 1px">Home</a></li>
+              <li class="nav-item me-5"><a class="nav-link nav-link" href="#"style="color: #ccc;font-weight: 200; transition: color 0.3s ease;border-left: #007bbd00 solid 1px">About</a></li>
+              <li class="nav-item me-5"><a class="nav-link nav-link" href="#"style="color: #ccc;font-weight: 200;transition: color 0.3s ease;border-left: #007bbd00 solid 1px">Services</a></li>
+              <li class="nav-item me-5"><a class="nav-link nav-link" href="#"style="color: #ccc;font-weight: 200;transition: color 0.3s ease;border-left: #007bbd00 solid 1px">Contact</a></li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
 
     <div><%- body  %></div>
     
@@ -505,7 +538,8 @@ section {
           </div>
         </footer>
    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/js/navbarScroll.js"></script>
   </body>
   </html>
     

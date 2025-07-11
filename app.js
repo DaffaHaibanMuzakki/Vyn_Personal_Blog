@@ -126,6 +126,14 @@ app.delete('/article_data', async function(req,res) {
   res.redirect('http://localhost:3000/article_data?page=1&limit=6');
 })
 
+
+
+app.get('/button', async function (req, res) {
+  res.render('testButton',{layout:'layouts/Navbar'}) ;
+  }) ; 
+
+
+
 app.get('/categories/:name', async function (req, res) {
   let data = (await Article.find()).filter(e => e.categories == req.params.name) ;
   console.log("data awal :");
